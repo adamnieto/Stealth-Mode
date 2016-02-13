@@ -1,17 +1,37 @@
 {
   "manifest_version": 2,
 
-  "name": "Getting started example",
-  "description": "This extension shows a Google Image search result for the current page",
-  "version": "1.0",
+  "name": "Stealth Mode",
+  "description": "Get rid of the like button.",
+  "version": "1.0.0",
 
-  "browser_action": {
-    "default_icon": "ninja-logo.png",
-    "default_popup": "popup.html",
-    "default_title": "Stealth Mode"
+  "icons": {
+    "128": "ninja-logo.png"
   },
+
   "permissions": [
-    "activeTab",
-    "https://ajax.googleapis.com/"
-  ]
+    "https://www.facebook.com/",
+    "http://www.facebook.com/",
+    "tabs",
+    "storage"
+  ],
+
+  "background": {
+    "scripts": ["bootstrap.js"],
+    "persistent": false
+  },
+
+   "content_scripts": [
+    {
+      "matches": ["http://www.facebook.com/*", "https://www.facebook.com/*"],
+      "js": ["libs/underscore.min.js", "stealth.js"]
+    }
+  ],
+
+  "page_action": {
+    "default_title": "Stealth Mode",
+    "default_icon": "ninja-logo.png",
+    "default_popup": "popup.html"
+  }
+
 }
