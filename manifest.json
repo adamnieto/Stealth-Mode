@@ -7,7 +7,8 @@
 
   "browser_action": {
     "default_icon": "ninja-logo.png",
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_title": "Stealth Mode"
   },
   "permissions": [
     "activeTab",
