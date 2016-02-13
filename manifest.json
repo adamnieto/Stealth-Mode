@@ -10,8 +10,15 @@
     "default_popup": "popup.html",
     "default_title": "Stealth Mode"
   },
+  "page_action": {
+    "default_title": "Extension Name",
+    "default_icon": "path/to/logo.jpg",
+    "default_popup": "path/to/popup.html"
+  },
   "permissions": [
     "activeTab",
-    "https://ajax.googleapis.com/"
+    "https://www.facebook.com",
+    "http://www.facebook.com"
   ]
+
 }
