@@ -17,20 +17,19 @@
   ],
 
   "background": {
-    "scripts": ["bootstrap.js"],
+    "scripts": ["background.js"],
     "persistent": false
   },
 
    "content_scripts": [
     {
       "matches": ["http://www.facebook.com/*", "https://www.facebook.com/*"],
-      "js": ["libs/underscore.min.js", "stealth.js"]
+      "js": ["jquery-2.2.0.min.js", "stealth.js"]
     }
   ],
 
   "page_action": {
     "default_title": "Stealth Mode",
-    "default_icon": "ninja-logo.png",
-    "default_popup": "popup.html"
-
+    "default_icon": "ninja-logo.png"
+  }
 }
