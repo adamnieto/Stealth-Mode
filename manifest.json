@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Stealth Mode",
-  "description": "Get rid of the like button.",
+  "description": "Removes the like button from Facebook.",
   "version": "1.0.0",
 
   "icons": {
@@ -11,15 +11,8 @@
 
   "permissions": [
     "https://www.facebook.com/",
-    "http://www.facebook.com/",
-    "tabs",
-    "storage"
+    "http://www.facebook.com/"
   ],
-
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
 
    "content_scripts": [
     {
